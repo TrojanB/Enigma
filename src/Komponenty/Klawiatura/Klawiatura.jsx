@@ -3,10 +3,10 @@ import useEffect from "react";
 import useRef from "react";
 import styles from "./Klawiatura.module.css";
 
-function Klawiatura({pressedKey}) {
+function Klawiatura({pressedKey, onKeyPressed, onRemoveKeyPressed}) {
 
     const rzedy = [
-        ["A", "W", "E", "R", "T", "Z", "U", "I", "O"],
+        ["Q", "W", "E", "R", "T", "Z", "U", "I", "O"],
         ["A","S","D","F","G","H","J","K"],
         ["P","Z","X","C","V","B","N","M","L"]
     ]
@@ -30,10 +30,11 @@ function Klawiatura({pressedKey}) {
 
     {/* Klawiatura */}        
         <div className={styles.klawiatura}>
+            <button className={styles.backspaceKlawisz} onClick={() => onRemoveKeyPressed?.()}>{"<--"}</button>
             {rzedy.map((rzad,index) => (
                 <div className={styles.rzad} key={index}>
                     {rzad.map((litera) => (
-                        <button key={litera} className={styles.klawisz}>{litera}</button>
+                        <button key={litera} className={styles.klawisz} onClick={() => onKeyPressed?.(litera)}>{litera}</button>
                     ))}
                 </div>
             ))}

@@ -17,8 +17,21 @@ function Enigma(){
     const [pozycja_II, setPozycja_II] = useState(0)
     const [pozycja_III, setPozycja_III] = useState(0)
 
+    //wpisywanie reczne
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
+    }
+
+    //wpisywanie przy uzyciu komponentu Klawiatura
+    const handleKeyPress = (litera) => {
+        setInputValue(prev => prev + litera);
+        console.log(litera);
+    }
+
+    //usuwanie przy uzyciu komponentu Klawiatura
+    const handleRemoveKeyPress = () => {
+        setInputValue(prev => prev.slice(0, -1));
+        console.log("usunieto znak");
     }
 
     useEffect(() => {
@@ -47,7 +60,11 @@ function Enigma(){
 
                 <InputText value={inputValue} onChange={handleInputChange} />
 
-                <Klawiatura pressedKey={inputValue.slice(-1)}/>
+                <Klawiatura 
+                    pressedKey={inputValue.slice(-1)}
+                    onKeyPressed={handleKeyPress}
+                    onRemoveKeyPressed={handleRemoveKeyPress}
+                />
             </div>
         </>
     )
