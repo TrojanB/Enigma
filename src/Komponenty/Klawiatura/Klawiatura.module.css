@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width:100%;
-    gap: 50px;
+    gap: 30px;
 
     font-family: 'Courier New', Courier, monospace;
 }
@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: min(80vw, 400px);
     height: 100%;
     gap: 10px;
 
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 1px;
 }
 
 
@@ -34,17 +34,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
 
     border: 5px solid rgb(19, 18, 18);
     border-radius: 50%;
-    width: auto;
-    min-width: 2rem;
+    width: 50px;
     aspect-ratio: 1/1;
 
     background-color: #221f1f;
 
-    font-size: 0.8rem;
+    font-size: 1.5em;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -61,9 +59,8 @@
     justify-content: center;
     align-items: center;
 
-    border: 5px solid rgb(19, 18, 18);
     border-radius: 50%;
-    width: 50px;
+    width: min(3rem, 50px);
     aspect-ratio: 1/1;
 
     background-color: #221f1f;
