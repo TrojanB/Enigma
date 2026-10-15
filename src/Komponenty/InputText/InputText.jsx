@@ -1,6 +1,6 @@
 import styles from './InputText.module.css';
 
-function InputText({value, onChange}) {
+function InputText({value, onChange, szyfr}) {
 
     return(
        <div className={styles.inputTextContainer}>
@@ -11,7 +11,7 @@ function InputText({value, onChange}) {
             />
 
             <div className={styles.displayText}>
-                {value}
+                {szyfr}
             </div>
 
        </div>
