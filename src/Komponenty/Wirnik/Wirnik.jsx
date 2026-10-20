@@ -26,11 +26,11 @@ function Wirnik( {pozycja, setPozycja} ) {
     
     return(
         <div className={styles.wirnikContainer}>
-            <button className={styles.przyciskWirnik} onClick={handleClickUp}>⬆️</button>
+            <button className={`${styles.przyciskWirnik} ${styles.przyciskWirnikGora}`} onClick={handleClickUp}>⬆️</button>
             <div className={styles.displayLitera}>
                 {alfabet[pozycja]}
             </div>
-            <button className={styles.przyciskWirnik} onClick={handleClickDown}>⬇️</button>
+            <button className={`${styles.przyciskWirnik} ${styles.przyciskWirnikDol}`} onClick={handleClickDown}>⬇️</button>
         </div>
     )
 }

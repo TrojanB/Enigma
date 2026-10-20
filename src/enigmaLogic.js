@@ -1,17 +1,17 @@
 const alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const I = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
-const II = "AJDKSIRUXBLHWTMCQGZNPYFVOE"; 
+const II = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
 const III = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
 const REFLECTOR = "YRUHQSLDPXNGOKMIEBFZCWVJAT";
 
-function obrotWirnika(wirnik, n){
+function obrotWirnika(wirnik, n) {
     let przesuniecie = n;
-    return wirnik.slice(przesuniecie) + wirnik.slice(0,przesuniecie);
+    return wirnik.slice(przesuniecie) + wirnik.slice(0, przesuniecie);
 }
 
 //pozycje od wirnikow od lewej do prawej czyli III - II - I
-export function szyfrujLitere(litera, pozycje){
+export function szyfrujLitere(litera, pozycje) {
     let litera_szyfr = alfabet.indexOf(litera.toUpperCase());
     if (litera_szyfr === -1) return litera; // zabezpieczenie na spacje/błędy
 
@@ -53,6 +53,5 @@ export function szyfrujLitere(litera, pozycje){
     return alfabet[litera_szyfr];
 }
 
-console.log(szyfrujLitere('C', [0,0,1]));
 
 
