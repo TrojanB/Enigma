@@ -26,19 +26,6 @@ function Klawiatura({pressedKey, onKeyPressed, onRemoveKeyPressed}) {
                 </div>
             ))}
         </div>
-
-
-    {/* Klawiatura */}        
-        <div className={styles.klawiatura}>
-            <button className={styles.backspaceKlawisz} onClick={() => onRemoveKeyPressed?.()}>{"<--"}</button>
-            {rzedy.map((rzad,index) => (
-                <div className={styles.rzad} key={index}>
-                    {rzad.map((litera) => (
-                        <button key={litera} className={styles.klawisz} onClick={() => onKeyPressed?.(litera)}>{litera}</button>
-                    ))}
-                </div>
-            ))}
-        </div>
     </div>
         </>
     )
