@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 
 import styles from './Enigma.module.css';
-import Klawiatura from '../Klawiatura/Klawiatura';
+import Lampki from '../Lampki/Lampki.jsx';
 import Wirnik from '../Wirnik/Wirnik';
 import InputText from '../InputText/InputText';
 import {szyfrujLitere} from '../../enigmaLogic.js';
@@ -39,7 +39,6 @@ function Enigma(){
             setPozycja_III(aktualna_pozycja_III);
             setZaszyfrowanyText(z => z + szyfr);
             setPrevZaszyfrowanaLitera(szyfr.slice(-1));
-            console.log(zaszyfrowanyText);
         }
 
         else if(cleanText.length < prevIn){
@@ -88,13 +87,12 @@ function Enigma(){
                 <Wirnik pozycja={pozycja_III} setPozycja={setPozycja_III}/>
                 </div>
 
+                <Lampki 
+                    zaszyfrowanaLitera={prevZaszyfrowanaLitera}
+                />
+
                 <InputText value={inputValue} onChange={handleInputChange} szyfr = {zaszyfrowanyText} />
 
-                <Klawiatura 
-                    pressedKey={inputValue.slice(-1)}
-                    onKeyPressed={handleKeyPress}
-                    onRemoveKeyPressed={handleRemoveKeyPress}
-                />
             </div>
         </>
     )

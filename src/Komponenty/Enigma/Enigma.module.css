@@ -7,12 +7,8 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    gap: 0;
-    overflow: hidden;
-    background-color: #143d72;
-    background-image:  radial-gradient(circle, #070707 0.8px, transparent 0.8px), radial-gradient(circle, #0f0f0f 0.8px, transparent 0.8px) ;
-    background-size: 5px 20px, 20px 5px;
-    background-position: -2.5px -10px, -10px -2.5px;
+    gap: 25px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .wirniki{

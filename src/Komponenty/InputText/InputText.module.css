@@ -5,4 +5,29 @@
     align-items: center;
     height: 100px;
     width: 100%;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.inputText{
+    height: 45px;
+    width: max(100px, 20vw);
+
+    border: none;
+    border-bottom: 2.5px solid black;
+    background: none;
+    font-size: min(15px, 3vh);
+
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.inputText:focus{
+    outline: none;
+}
+
+.displayText{
+    color: #ffb000;
+    font-weight: bold;
 }

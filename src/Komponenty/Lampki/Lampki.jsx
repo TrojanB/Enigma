@@ -1,9 +1,9 @@
 import useState from "react";
 import useEffect from "react";
 import useRef from "react";
-import styles from "./Klawiatura.module.css";
+import styles from "./Lampki.module.css";
 
-function Klawiatura({pressedKey, onKeyPressed, onRemoveKeyPressed}) {
+function Lampki({zaszyfrowanaLitera}) {
 
     const rzedy = [
         ["Q", "W", "E", "R", "T", "Z", "U", "I", "O"],
@@ -15,11 +15,15 @@ function Klawiatura({pressedKey, onKeyPressed, onRemoveKeyPressed}) {
         <>
     {/* Lampki z literami ktore sie zapalają (nie mozna klikać) */}
     <div className={styles.container}>
-        <div className={styles.klawiatura}>
+        <div className={styles.lampki}>
             {rzedy.map((rzad,index) => (
                 <div className={styles.rzad} key={index}>
                     {rzad.map((litera) => (
-                        <div className={styles.klawiszSzyfr} key={litera}>
+                        <div key={litera} 
+                        className={`${styles.lampka} ${
+                            zaszyfrowanaLitera === litera ? styles.aktywna : ""
+                        }`}
+                        >
                             {litera}
                         </div>
                     ))}
@@ -31,4 +35,4 @@ function Klawiatura({pressedKey, onKeyPressed, onRemoveKeyPressed}) {
     )
 }
 
-export default Klawiatura;
+export default Lampki;
