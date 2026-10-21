@@ -1,23 +1,28 @@
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-body,html, #root{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
-body, #root{
-  min-height: 100vh;
-}
+body {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
 
-body{
-  overflow: hidden;
-  background-color: #143d72;
-  background-image:  radial-gradient(circle, #070707 0.8px, transparent 0.8px), radial-gradient(circle, #0f0f0f 0.8px, transparent 0.8px) ;
-  background-size: 5px 20px, 20px 5px;
-  background-position: -2.5px -10px, -10px -2.5px;
-  background-repeat: repeat;
+    background-color: #143d72;
+    background-image:
+        radial-gradient(circle, #070707 0.8px, transparent 0.8px),
+        radial-gradient(circle, #0f0f0f 0.8px, transparent 0.8px);
+    background-size: 5px 20px, 20px 5px;
+    background-position: -2.5px -10px, -10px -2.5px;
+    background-repeat: repeat;
 }

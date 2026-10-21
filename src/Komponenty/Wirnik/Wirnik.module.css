@@ -1,44 +1,61 @@
-.wirnikContainer{
-    width: clamp(50px, 100px, 200px);
-    height: max(100px, );
+.wirnikContainer {
+    width: min(70px, 18vw);
 }
 
-.przyciskWirnik{
+.przyciskWirnik {
     box-sizing: border-box;
     width: 100%;
-    height: 20%;
+    height: 27px;
     background-color: #2e678d;
-    border: 5px solid rgb(19, 18, 18);
+    border: 3px solid rgb(19, 18, 18);
 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     cursor: pointer;
 }
 
-.przyciskWirnikGora{
-    border-radius: 10px 10px 0 0;
+.przyciskWirnikGora {
+    border-radius: 8px 8px 0 0;
 }
 
-.przyciskWirnikDol{
-    border-radius: 0 0 10px 10px;
+.przyciskWirnikDol {
+    border-radius: 0 0 8px 8px;
 }
 
-.displayLitera{
+.displayLitera {
     box-sizing: border-box;
     width: 100%;
-    height: max(120px, 80%);
+    height: min(78px, 4vh);
     background-color: #221f1f;
-    border: 5px solid rgb(19, 18, 18);
+    border: 3px solid rgb(19, 18, 18);
 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: height 0.2s ease, font-size 0.2s ease;
 }
 
+/* komputer: POD bazą */
+@media (min-width: 768px) {
+    .wirnikContainer {
+        width: 90px;
+    }
+
+    .przyciskWirnik {
+        height: min(30px, 6vh);
+        font-size: 18px;
+    }
+
+    .displayLitera {
+        height: min(100px, 14vh);
+        font-size: 40px;
+    }
+}

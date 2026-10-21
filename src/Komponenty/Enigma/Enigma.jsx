@@ -17,6 +17,8 @@ function Enigma(){
     const [pozycja_I, setPozycja_I] = useState(0)
     const [pozycja_II, setPozycja_II] = useState(0)
     const [pozycja_III, setPozycja_III] = useState(0)
+    const [keyboardOpen, setKeyboardOpen] = useState(false);
+
 
     const processInput = (newText) => {
         const cleanText = newText.toUpperCase().replaceAll(' ', '');
@@ -77,10 +79,34 @@ function Enigma(){
         processInput(removedChar);
     }
 
+    useEffect(() => {
+        const vv = window.visualViewport;
+        if (!vv) return;
+
+        let baseWidth = vv.width;
+        let baseHeight = vv.height;
+
+        const onResize = () => {
+            if (vv.scale > 1) return; // ignoruj pinch-zoom
+
+            // obrót ekranu -> nowa wysokość bazowa
+            if (vv.width !== baseWidth) {
+                baseWidth = vv.width;
+                baseHeight = vv.height;
+            }
+            if (vv.height > baseHeight) baseHeight = vv.height;
+
+            setKeyboardOpen(baseHeight - vv.height > 150);
+        };
+
+        vv.addEventListener('resize', onResize);
+        return () => vv.removeEventListener('resize', onResize);
+    }, []);
+
     return(
         <>
 
-            <div className={styles.enigma}>
+            <div className={`${styles.enigma} ${keyboardOpen ? styles.keyboardOpen : ''}`}>
                 <div className={styles.wirniki}>
                 <Wirnik pozycja={pozycja_I} setPozycja={setPozycja_I} />
                 <Wirnik pozycja={pozycja_II} setPozycja={setPozycja_II}/>
@@ -93,6 +119,7 @@ function Enigma(){
 
                 <InputText value={inputValue} onChange={handleInputChange} szyfr = {zaszyfrowanyText} />
 
+                <footer>Autor: trojanb 2026</footer>
             </div>
         </>
     )

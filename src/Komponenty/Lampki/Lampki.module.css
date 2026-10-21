@@ -22,11 +22,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 .lampka{
-    width: min(50px, 10vw);
+    width: clamp(35px, 50px, 7vw);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
