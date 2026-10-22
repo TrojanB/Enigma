@@ -1,21 +1,24 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100%;
+
+    width: 100%;
+    flex-shrink: 0;
     gap: 30px;
 }
 
-.lampki{
+.lampki {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: min(80vw, 400px);
-    height: 100%;
-    gap: 10px;
 
+    width: min(80vw, 400px);
+    height: auto;
+    flex-shrink: 0;
+    gap: 10px;
 }
 
 .rzad{

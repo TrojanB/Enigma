@@ -43,7 +43,6 @@
     transition: height 0.2s ease, font-size 0.2s ease;
 }
 
-/* komputer: POD bazą */
 @media (min-width: 768px) {
     .wirnikContainer {
         width: 90px;

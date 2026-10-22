@@ -44,7 +44,7 @@ function InputText({value, onChange, szyfr}) {
             />
 
             <div className={styles.displayText}>
-               {szyfr}
+               <p>{szyfr}</p>
             </div>
 
        </div>
