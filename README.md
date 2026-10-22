@@ -1,16 +1,60 @@
-# React + Vite
+# Enigma Machine
+An interactive Enigma cipher simulator built with React and JavaScript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+https://trojanb.github.io/Enigma/
 
-Currently, two official plugins are available:
+## How to use
+<ol>
+<li>Set the rotors — choose the initial positions of the rotors.</li>
+<li>Enter your text — type a message into the input field or use the on-screen keyboard.</li>
+<li>Encrypt the message — the encrypted text is displayed below the input.</li>
+<li>Reset the machine — return the rotors to their initial positions before encrypting another message, if needed.</li>
+</ol>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Note: The same initial rotor settings and encryption configuration are needed to reproduce the same result.
 
-## React Compiler
+## Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Desktop
+<p align="center">
+  <img width="600" alt="obraz" src="https://github.com/user-attachments/assets/a0566e73-3283-4976-8e4a-c30be6406a0a" />
+  <img width="600" alt="obraz" src="https://github.com/user-attachments/assets/44f65104-fd8f-4bd2-960d-cb7b1dfb6ea7" />
+</p>
 
-## Expanding the ESLint configuration
+### Mobile
+<p align="center">
+  <img width="300" alt="obraz" src="https://github.com/user-attachments/assets/fce73420-f817-4ea7-98fb-4c85a192aa89" />
+  <img width="300" alt="obraz" src="https://github.com/user-attachments/assets/37d5c417-7386-417a-8a87-9bde6c222d0f" />
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+<ul>
+  <li>Interactive rotor controls</li>
+  <li>Real-time text encryption</li>
+  <li>Visual letter indicators</li>
+  <li>Responsive user interface</li>
+</ul>
+
+## Technologies
+<ul>
+  <li>React</li>
+  <li>JavaScript</li>
+  <li>Vite</li>
+  <li>CSS Modules</li>
+</ul>
+
+## Run localy
+
+Clone the repository and install the dependencies:
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal
