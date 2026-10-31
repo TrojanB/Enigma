@@ -1,5 +1,5 @@
 # Enigma Machine
-An interactive Enigma cipher simulator built with React and JavaScript.
+An interactive Commercial Enigma (Model D) Simulator built with React and JavaScript.
 
 ## Live Demo
 https://trojanb.github.io/Enigma/
